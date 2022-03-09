@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-mongo
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: azuredisk
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-grandnode
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: azuredisk
+  resources:
+    requests:
+      storage: 5Gi
